@@ -18,6 +18,7 @@ var ModalDialog = function(options) {
         headerText: '&nbsp;',
         actionButtonText: 'Yes, Continue',
         actionButtonClass: 'btn-primary',
+        appendTo: '',
         contentTemplateId: null,
         bindingData: null,
         largeModal: false
@@ -32,7 +33,7 @@ ModalDialog.prototype = {
             this.modalId().remove();
         }
 
-        $.get("/app/templates/modaltmpl.htm")
+        $.get("templates/modaltmpl.htm")
             .done(function(data) {
                 self.setup(data);
 
@@ -54,8 +55,9 @@ ModalDialog.prototype = {
         }
         
         var compiled = _.template(data);
-        
-        $(".container").append(compiled(this.metadata));
+
+        this.metadata.appendTo = this.metadata.appendTo || 'body';
+        $(this.metadata.appendTo).append(compiled(this.metadata));
 
         $("#" + this.metadata.Id + " .modalActionButton").click(function (e) {
             e.preventDefault();

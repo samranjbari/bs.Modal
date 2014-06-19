@@ -1,0 +1,24 @@
+
+.modal-header {
+    background-color: #34495e;
+    color: #fff;
+}
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    min-height: 16.714285714285715px;
+}
+.modal-header .close:hover, .modal-header .close:focus {
+    opacity: .85;
+}
+.modal-header .close {
+    width: 21px;
+    height: 21px;
+    line-height: 21px;
+    padding: 0;
+    border-radius: 10px;
+    background-color: #fff;
+    opacity: 1;
+    color: #001e50;
+    text-align: center;
+}
