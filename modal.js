@@ -68,13 +68,14 @@ ModalDialog.prototype = {
 
     show: function(func) {
         var self = this;
-        $.when(this.init()).then(function () {
-            self.modalId().modal(self.metadata);
-
-            if (typeof func === 'function') {
-                func();
-            }
-        });
+        this.init()
+            .then(function () {
+                self.modalId().modal(self.metadata);
+    
+                if (typeof func === 'function') {
+                    func();
+                }
+            });
     },
 
     hide: function() {
