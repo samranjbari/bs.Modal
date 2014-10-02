@@ -4,7 +4,7 @@ bs.Modal
 This javascript library will create bootstrap modal dialog dynamically without the need of any html markup
 
 ```
-var modal = new ModalDialog({
+var modal = new bs.ModalDialog({
                 /* optional parameters */
                 backdrop: 'static',
                 keyboard: false,
