@@ -112,4 +112,8 @@ var bs = (function(window, dom, undefined) {
             return $("#" + this.metadata.Id);
         }
     }
+    
+    return {
+        ModalDialog: ModalDialog
+    }
 })(this, this.document);
