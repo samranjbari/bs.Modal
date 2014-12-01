@@ -65,6 +65,10 @@ var bs = (function(window, dom, undefined) {
     
                 self.emit(self.eventsMapper.submitted, e);
             });
+            
+            $("#" + this.metadata.Id).on('hidden.bs.modal', function (e) {
+                self.emit(self.eventsMapper.closed, e);
+            });
         },
     
         show: function(func) {
